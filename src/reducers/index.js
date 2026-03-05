@@ -1,15 +1,13 @@
-import { useState } from "react";
 import {
   ADD_ONE,
   APPLY_NUMBER,
+  CALCULATE,
   CHANGE_OPERATION,
   CLEAR,
-  MEMORY_CLEAR,
-  MEMORY_RECALL,
-  MEMORY_PLUS,
   DIGIT,
-  CALCULATE,
-  applyNumber,
+  MEMORY_CLEAR,
+  MEMORY_PLUS,
+  MEMORY_RECALL,
 } from "./../actions";
 
 export const initialState = {
@@ -107,7 +105,7 @@ const reducer = (state = initialState, action) => {
       const calculation = calculateResult(
         state.screen,
         state.temp,
-        state.operation
+        state.operation,
       );
 
       return { ...state, total: calculation, screen: calculation, temp: 0 };

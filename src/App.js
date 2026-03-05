@@ -1,19 +1,16 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 
-import TotalDisplay from "./components/TotalDisplay";
 import CalcButton from "./components/CalcButton";
+import TotalDisplay from "./components/TotalDisplay";
 
 import {
-  ADD_ONE,
-  APPLY_NUMBER,
-  applyNumber,
+  CALCULATE,
   CHANGE_OPERATION,
   CLEAR,
   MEMORY_CLEAR,
-  MEMORY_RECALL,
   MEMORY_PLUS,
+  MEMORY_RECALL,
   screenType,
-  CALCULATE,
 } from "./actions";
 import reducer, { initialState } from "./reducers";
 
