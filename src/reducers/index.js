@@ -95,7 +95,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         screen:
-          state.screen == 0
+          state.screen === 0
             ? action.payload
             : typeDigit(state.screen, action.payload),
       };
